@@ -1,0 +1,359 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "withdraw",
+            "source_mapping": {
+              "start": 204,
+              "length": 185,
+              "filename_relative": "SimpleContract.sol",
+              "filename_absolute": "C:/Users/nerdf/chainsec-poc/SimpleContract.sol",
+              "filename_short": "SimpleContract.sol",
+              "is_dependency": false,
+              "lines": [
+                11,
+                12,
+                13,
+                14,
+                15
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "SimpleContract",
+                "source_mapping": {
+                  "start": 61,
+                  "length": 331,
+                  "filename_relative": "SimpleContract.sol",
+                  "filename_absolute": "C:/Users/nerdf/chainsec-poc/SimpleContract.sol",
+                  "filename_short": "SimpleContract.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "withdraw(uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "address(msg.sender).transfer(amount)",
+            "source_mapping": {
+              "start": 317,
+              "length": 36,
+              "filename_relative": "SimpleContract.sol",
+              "filename_absolute": "C:/Users/nerdf/chainsec-poc/SimpleContract.sol",
+              "filename_short": "SimpleContract.sol",
+              "is_dependency": false,
+              "lines": [
+                13
+              ],
+              "starting_column": 9,
+              "ending_column": 45
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "withdraw",
+                "source_mapping": {
+                  "start": 204,
+                  "length": 185,
+                  "filename_relative": "SimpleContract.sol",
+                  "filename_absolute": "C:/Users/nerdf/chainsec-poc/SimpleContract.sol",
+                  "filename_short": "SimpleContract.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    11,
+                    12,
+                    13,
+                    14,
+                    15
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "SimpleContract",
+                    "source_mapping": {
+                      "start": 61,
+                      "length": 331,
+                      "filename_relative": "SimpleContract.sol",
+                      "filename_absolute": "C:/Users/nerdf/chainsec-poc/SimpleContract.sol",
+                      "filename_short": "SimpleContract.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12,
+                        13,
+                        14,
+                        15,
+                        16
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "withdraw(uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "SimpleContract.withdraw(uint256) (SimpleContract.sol#11-15) sends eth to arbitrary user\n\tDangerous calls:\n\t- address(msg.sender).transfer(amount) (SimpleContract.sol#13)\n",
+        "markdown": "[SimpleContract.withdraw(uint256)](SimpleContract.sol#L11-L15) sends eth to arbitrary user\n\tDangerous calls:\n\t- [address(msg.sender).transfer(amount)](SimpleContract.sol#L13)\n",
+        "first_markdown_element": "SimpleContract.sol#L11-L15",
+        "id": "758dee355d290ff07487309271808327f7d4d9f6810ec86475ccdd2596a63eb1",
+        "check": "arbitrary-send-eth",
+        "impact": "High",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "withdraw",
+            "source_mapping": {
+              "start": 204,
+              "length": 185,
+              "filename_relative": "SimpleContract.sol",
+              "filename_absolute": "C:/Users/nerdf/chainsec-poc/SimpleContract.sol",
+              "filename_short": "SimpleContract.sol",
+              "is_dependency": false,
+              "lines": [
+                11,
+                12,
+                13,
+                14,
+                15
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "SimpleContract",
+                "source_mapping": {
+                  "start": 61,
+                  "length": 331,
+                  "filename_relative": "SimpleContract.sol",
+                  "filename_absolute": "C:/Users/nerdf/chainsec-poc/SimpleContract.sol",
+                  "filename_short": "SimpleContract.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "withdraw(uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "address(msg.sender).transfer(amount)",
+            "source_mapping": {
+              "start": 317,
+              "length": 36,
+              "filename_relative": "SimpleContract.sol",
+              "filename_absolute": "C:/Users/nerdf/chainsec-poc/SimpleContract.sol",
+              "filename_short": "SimpleContract.sol",
+              "is_dependency": false,
+              "lines": [
+                13
+              ],
+              "starting_column": 9,
+              "ending_column": 45
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "withdraw",
+                "source_mapping": {
+                  "start": 204,
+                  "length": 185,
+                  "filename_relative": "SimpleContract.sol",
+                  "filename_absolute": "C:/Users/nerdf/chainsec-poc/SimpleContract.sol",
+                  "filename_short": "SimpleContract.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    11,
+                    12,
+                    13,
+                    14,
+                    15
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "SimpleContract",
+                    "source_mapping": {
+                      "start": 61,
+                      "length": 331,
+                      "filename_relative": "SimpleContract.sol",
+                      "filename_absolute": "C:/Users/nerdf/chainsec-poc/SimpleContract.sol",
+                      "filename_short": "SimpleContract.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12,
+                        13,
+                        14,
+                        15,
+                        16
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "withdraw(uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "balance -= amount",
+            "source_mapping": {
+              "start": 364,
+              "length": 17,
+              "filename_relative": "SimpleContract.sol",
+              "filename_absolute": "C:/Users/nerdf/chainsec-poc/SimpleContract.sol",
+              "filename_short": "SimpleContract.sol",
+              "is_dependency": false,
+              "lines": [
+                14
+              ],
+              "starting_column": 9,
+              "ending_column": 26
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "withdraw",
+                "source_mapping": {
+                  "start": 204,
+                  "length": 185,
+                  "filename_relative": "SimpleContract.sol",
+                  "filename_absolute": "C:/Users/nerdf/chainsec-poc/SimpleContract.sol",
+                  "filename_short": "SimpleContract.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    11,
+                    12,
+                    13,
+                    14,
+                    15
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "SimpleContract",
+                    "source_mapping": {
+                      "start": 61,
+                      "length": 331,
+                      "filename_relative": "SimpleContract.sol",
+                      "filename_absolute": "C:/Users/nerdf/chainsec-poc/SimpleContract.sol",
+                      "filename_short": "SimpleContract.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12,
+                        13,
+                        14,
+                        15,
+                        16
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "withdraw(uint256)"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "balance"
+            }
+          }
+        ],
+        "description": "Reentrancy in SimpleContract.withdraw(uint256) (SimpleContract.sol#11-15):\n\tExternal calls:\n\t- address(msg.sender).transfer(amount) (SimpleContract.sol#13)\n\tState variables written after the call(s):\n\t- balance -= amount (SimpleContract.sol#14)\n",
+        "markdown": "Reentrancy in [SimpleContract.withdraw(uint256)](SimpleContract.sol#L11-L15):\n\tExternal calls:\n\t- [address(msg.sender).transfer(amount)](SimpleContract.sol#L13)\n\tState variables written after the call(s):\n\t- [balance -= amount](SimpleContract.sol#L14)\n",
+        "first_markdown_element": "SimpleContract.sol#L11-L15",
+        "id": "fb212d302a53fffcdb7517c399b5bbc653eb8944c3cbe124d4f6450dfeb5498c",
+        "check": "reentrancy-unlimited-gas",
+        "impact": "Informational",
+        "confidence": "Medium"
+      }
+    ]
+  }
+}
